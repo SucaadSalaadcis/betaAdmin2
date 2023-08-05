@@ -12,10 +12,9 @@ import { AddCircleOutlineSharp, ErrorOutlineOutlined } from "@mui/icons-material
 import {  toast } from 'react-toastify';
 import { Link } from "react-router-dom";
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import ConfirmDelete from '../deleteComponent/ConfirmDelete'
 
-import ConfirmDelete from "../src/deleteComponent/ConfirmDelete";
-
-import { useDeleteHook } from "../src/deleteComponent/deleteHooks";
+import { useDeleteHook } from "../deleteComponent/deleteHooks";
 
 export const Contact = ()=>{
     

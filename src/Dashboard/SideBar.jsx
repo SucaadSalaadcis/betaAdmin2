@@ -52,6 +52,7 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
         </ListItemIcon>
         <ListItemText primary="Dashboard" />
       </ListItemButton>
+
       <Link to={'homeSettings'}>
       <ListItemButton
       sx={[selectedMenu === 'HomeSettings' && {bgcolor:"primary.main",color:"white",":hover":{
@@ -69,39 +70,58 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
 
       </Link>
 
-
-      <ListItemButton sx={[selectedMenu === 'Guryaha' && {bgcolor:"primary.main",color:"white",":hover":{
+      <Link to={'house'}>
+      <ListItemButton sx={[selectedMenu === 'house' && {bgcolor:"primary.main",color:"white",":hover":{
         bgcolor:"primary.dark"
       }}]}
       onClick={()=>{
-        setMenu('Guryaha')
+        setMenu('house')
         DrawerClose()
 
       }}>
         <ListItemIcon>
-          <HouseIcon  sx={[selectedMenu==='Guryaha' && {color:"white"}]}  />
+          <HouseIcon  sx={[selectedMenu==='house' && {color:"white"}]}  />
         </ListItemIcon>
-        <ListItemText primary="Guryaha" />
-        
+        <ListItemText primary="house"/>  
       </ListItemButton>
-     
+      </Link>
 
+      <Link to={'gallery'}>
+      <ListItemButton sx={[selectedMenu === 'gallery' && {bgcolor:"primary.main",color:"white",":hover":{
+        bgcolor:"primary.dark"
+      }}]}
+      onClick={()=>{
+        setMenu('gallery')
+        DrawerClose()
 
-      <ListItemButton >
+      }}>
         <ListItemIcon>
-          <CollectionsIcon />
+          <HouseIcon  sx={[selectedMenu==='gallery' && {color:"white"}]}  />
         </ListItemIcon>
-        <ListItemText primary="Gallery" />
-        
+        <ListItemText primary="Gallery"/>  
       </ListItemButton>
+      </Link>
 
-      <ListItemButton >
+
+      <Link to={'services'}>
+      <ListItemButton sx={[selectedMenu === 'services' && {bgcolor:"primary.main",color:"white",":hover":{
+        bgcolor:"primary.dark"
+      }}]}
+      onClick={()=>{
+        setMenu('services')
+        DrawerClose()
+
+      }}>
         <ListItemIcon>
-          <MiscellaneousServicesIcon />
+          <InboxIcon  sx={[selectedMenu==='services' && {color:"white"}]} />
         </ListItemIcon>
-        <ListItemText primary="Services" />
+        <ListItemText primary="Service" />
         
       </ListItemButton>
+      </Link>
+
+
+
 
       <Link to={'client'}>
       <ListItemButton sx={[selectedMenu === 'client' && {bgcolor:"primary.main",color:"white",":hover":{
@@ -120,6 +140,8 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
       </ListItemButton>
       </Link>
 
+
+      
       <Link to={'about'}>
       <ListItemButton sx={[selectedMenu === 'about' && {bgcolor:"primary.main",color:"white",":hover":{
         bgcolor:"primary.dark"
@@ -130,12 +152,13 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
 
       }}>
         <ListItemIcon>
-          <RoundaboutRightIcon  sx={[selectedMenu==='about' && {color:"white"}]} />
+          <InboxIcon  sx={[selectedMenu==='about' && {color:"white"}]} />
         </ListItemIcon>
-        <ListItemText primary="About" />
+        <ListItemText primary="about" />
         
       </ListItemButton>
       </Link>
+
 
 
 
@@ -160,6 +183,7 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
     </Box> 
     </Box>
 </Drawer>
+
 {/* big screen menu */}
     <Box sx={{width:"300px",height:"100vh",display:{
         xs:"none",
@@ -206,38 +230,38 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
         </ListItemIcon>
         <ListItemText primary="HomeSettings" />
       </ListItemButton>
-
       </Link>
 
-      <ListItemButton
-      sx={[selectedMenu ==='Guryaha' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}
-      onClick={()=>setMenu('Guryaha')} >
+      <Link to={'house'} style={{textDecoration:"none"}}>
+      <ListItemButton onClick={()=>setMenu('house')}  sx={[ selectedMenu==='house' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}>
         <ListItemIcon>
-         <HouseIcon sx={[selectedMenu === 'Guryaha' && {color:"white"}]}/> 
+          <MapsHomeWorkIcon sx={[ selectedMenu==='house' && {color:"white"}]} />
         </ListItemIcon>
         <ListItemText primary="House" />
-        
       </ListItemButton>
-     
+      </Link>
 
-
-       
-      <ListItemButton    >
+      <Link to={'gallery'} style={{textDecoration:"none"}}>
+      <ListItemButton onClick={()=>setMenu('gallery')}  sx={[ selectedMenu==='gallery' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}>
         <ListItemIcon>
-         <CollectionsIcon  /> 
+          <MapsHomeWorkIcon sx={[ selectedMenu==='gallery' && {color:"white"}]} />
         </ListItemIcon>
         <ListItemText primary="Gallery" />
-        
       </ListItemButton>
+      </Link>
+     
+     
       <Link to={'services'} style={{textDecoration:"none"}}>
-      <ListItemButton    >
-        <ListItemIcon> 
-          <MiscellaneousServicesIcon />
+      <ListItemButton  sx={[selectedMenu ==='services' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}
+      onClick={()=>setMenu('services')} >
+        <ListItemIcon>
+          <EmojiPeopleIcon sx={[selectedMenu === 'services' && {color:"white"}]} />
         </ListItemIcon>
-        <ListItemText primary="Services" />
+        <ListItemText primary="Service" />
         
       </ListItemButton>
       </Link>
+      
 
       <Link to={'client'} style={{textDecoration:"none"}}>
       <ListItemButton  sx={[selectedMenu ==='client' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}
@@ -252,7 +276,7 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
 
       <Link to={'about'} style={{textDecoration:"none"}}>
       <ListItemButton  sx={[selectedMenu ==='about' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}
-      onClick={()=>setMenu('client')} >
+      onClick={()=>setMenu('about')} >
         <ListItemIcon>
           <RoundaboutRightIcon sx={[selectedMenu === 'about' && {color:"white"}]} />
         </ListItemIcon>

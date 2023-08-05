@@ -35,7 +35,7 @@ const [servdeleteid,setservdeleteid]=useState('')
       }
        
   })
-   console.log(service?.data)
+  //  console.log(service?.data)
   const {mutate,isLoading:mutateLoading} = useMutation({
     mutationFn:async(data)=>await AddService(data),
     onSuccess:()=>{

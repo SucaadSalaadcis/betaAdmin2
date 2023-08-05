@@ -1,4 +1,4 @@
-import {api} from '../apiConfig/Config'
+import {api} from '../../apiConfig/Config'
 
 //contactForm
 

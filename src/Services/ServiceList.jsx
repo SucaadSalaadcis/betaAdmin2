@@ -43,7 +43,7 @@ export default function ServiceList({serviceData,update,deleteService}) {
         },
    ];
  const rows= serviceData ? serviceData : null
- console.log(serviceData)
+//  console.log(serviceData)
     
 
   return (
