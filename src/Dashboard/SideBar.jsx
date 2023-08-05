@@ -5,12 +5,11 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HouseIcon from '@mui/icons-material/House';
-import CollectionsIcon from '@mui/icons-material/Collections';
+import HouseSidingIcon from '@mui/icons-material/HouseSiding';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SettingsPhoneIcon from '@mui/icons-material/SettingsPhone';
-import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
+import CollectionsIcon from '@mui/icons-material/Collections';
 import MapsHomeWorkIcon from '@mui/icons-material/MapsHomeWork';
+import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
 import SendIcon from '@mui/icons-material/Send';
 import RoundaboutRightIcon from '@mui/icons-material/RoundaboutRight';
 import AddHomeWorkIcon from '@mui/icons-material/AddHomeWork';
@@ -53,17 +52,17 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
         <ListItemText primary="Dashboard" />
       </ListItemButton>
 
-      <Link to={'homeSettings'}>
+      <Link to={'homeSetting'}>
       <ListItemButton
-      sx={[selectedMenu === 'HomeSettings' && {bgcolor:"primary.main",color:"white",":hover":{
+      sx={[selectedMenu === 'homeSetting' && {bgcolor:"primary.main",color:"white",":hover":{
         bgcolor:"primary.dark"
       }}]}
       onClick={()=>{
-        setMenu('HomeSettings')
+        setMenu('homeSetting')
         DrawerClose()
       }}>
         <ListItemIcon>
-          <MapsHomeWorkIcon sx={[selectedMenu==='HomeSettings' && {color:"white"}]} />
+          <MapsHomeWorkIcon sx={[selectedMenu==='homeSetting' && {color:"white"}]} />
         </ListItemIcon>
         <ListItemText primary="HomeSettings" />
       </ListItemButton>
@@ -80,7 +79,7 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
 
       }}>
         <ListItemIcon>
-          <HouseIcon  sx={[selectedMenu==='house' && {color:"white"}]}  />
+          <HouseSidingIcon  sx={[selectedMenu==='house' && {color:"white"}]}  />
         </ListItemIcon>
         <ListItemText primary="house"/>  
       </ListItemButton>
@@ -96,7 +95,7 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
 
       }}>
         <ListItemIcon>
-          <HouseIcon  sx={[selectedMenu==='gallery' && {color:"white"}]}  />
+          <CollectionsIcon  sx={[selectedMenu==='gallery' && {color:"white"}]}  />
         </ListItemIcon>
         <ListItemText primary="Gallery"/>  
       </ListItemButton>
@@ -113,7 +112,7 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
 
       }}>
         <ListItemIcon>
-          <InboxIcon  sx={[selectedMenu==='services' && {color:"white"}]} />
+          <MiscellaneousServicesIcon  sx={[selectedMenu==='services' && {color:"white"}]} />
         </ListItemIcon>
         <ListItemText primary="Service" />
         
@@ -223,10 +222,10 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
       </ListItemButton>
     
     
-    <Link to={'home'} style={{textDecoration:"none"}}>
-      <ListItemButton onClick={()=>setMenu('Home')}  sx={[ selectedMenu==='Home' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}>
+    <Link to={'homeSetting'} style={{textDecoration:"none"}}>
+      <ListItemButton onClick={()=>setMenu('homeSetting')}  sx={[ selectedMenu==='homeSetting' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}>
         <ListItemIcon>
-          <MapsHomeWorkIcon sx={[ selectedMenu==='Home' && {color:"white"}]} />
+          <MapsHomeWorkIcon sx={[ selectedMenu==='homeSetting' && {color:"white"}]} />
         </ListItemIcon>
         <ListItemText primary="HomeSettings" />
       </ListItemButton>
@@ -235,7 +234,7 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
       <Link to={'house'} style={{textDecoration:"none"}}>
       <ListItemButton onClick={()=>setMenu('house')}  sx={[ selectedMenu==='house' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}>
         <ListItemIcon>
-          <MapsHomeWorkIcon sx={[ selectedMenu==='house' && {color:"white"}]} />
+          <HouseSidingIcon sx={[ selectedMenu==='house' && {color:"white"}]} />
         </ListItemIcon>
         <ListItemText primary="House" />
       </ListItemButton>
@@ -244,7 +243,7 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
       <Link to={'gallery'} style={{textDecoration:"none"}}>
       <ListItemButton onClick={()=>setMenu('gallery')}  sx={[ selectedMenu==='gallery' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}>
         <ListItemIcon>
-          <MapsHomeWorkIcon sx={[ selectedMenu==='gallery' && {color:"white"}]} />
+          <CollectionsIcon sx={[ selectedMenu==='gallery' && {color:"white"}]} />
         </ListItemIcon>
         <ListItemText primary="Gallery" />
       </ListItemButton>
@@ -255,7 +254,7 @@ export const Sidebar = ({DrawerOpen,DrawerClose})=>{
       <ListItemButton  sx={[selectedMenu ==='services' && {bgcolor:"primary.main",color:"white",":hover":{bgcolor:"primary.dark"}}]}
       onClick={()=>setMenu('services')} >
         <ListItemIcon>
-          <EmojiPeopleIcon sx={[selectedMenu === 'services' && {color:"white"}]} />
+          <MiscellaneousServicesIcon sx={[selectedMenu === 'services' && {color:"white"}]} />
         </ListItemIcon>
         <ListItemText primary="Service" />
         

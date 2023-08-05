@@ -1,7 +1,7 @@
  
 import { Route, Routes } from 'react-router-dom'
 import { Dashboard } from './Dashboard/Dashboard'
-import Home  from './Home/Home'
+import {Home} from './Home/Home'
 import {House} from './house/House'
 import  ImagesFolder  from './imagesFolder/ImagesFolder'
 import  Services  from './Services/services'
@@ -20,7 +20,7 @@ function App() {
       <Route path='/' element={<h1>Login page ...</h1>}/>
       <Route path='*' element={<NotFound/>}/>
       <Route path='dashboard' element={<Dashboard/>} >
-      <Route path='home' element={<Home/>}/>
+      <Route path='homeSetting' element={<Home/>}/>
       <Route path='gallery' element={<ImagesFolder/>}/>
       {/* <Route path='gallery/:id/:houseType' element={<ImagesFolder/>}/> */}
       <Route path='house' element={<House/>}/>
